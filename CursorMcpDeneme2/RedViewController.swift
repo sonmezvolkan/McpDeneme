@@ -2,7 +2,7 @@ import UIKit
 
 class RedViewController: UIViewController {
     // UI Elements
-    private let titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Erişilebilirlik"
         label.textAlignment = .center
@@ -12,27 +12,29 @@ class RedViewController: UIViewController {
         return label
     }()
     
-    private let checkboxContainer: UIView = {
+    private lazy var checkboxContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    private let checkboxLabel: UILabel = {
+    private lazy var checkboxLabel: UILabel = {
         let label = UILabel()
-        label.text = "checkbox deneme"
+        label.text = "Okudum, onaylıyorum."
         label.font = UIFont.systemFont(ofSize: 18)
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onCheckBoxLabelTap)))
         return label
     }()
     
-    private let checkboxButton: UIButton = {
+    private lazy var checkboxButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .systemBlue
         button.translatesAutoresizingMaskIntoConstraints = false
         button.isAccessibilityElement = true
-        button.accessibilityLabel = "Checkbox"
+        button.accessibilityLabel = "Checkbox değeri \(false)"
         button.accessibilityIdentifier = "checkboxButton"
         return button;
     }()
@@ -55,6 +57,7 @@ class RedViewController: UIViewController {
     
     @objc private func checkboxTapped() {
         isChecked.toggle()
+        checkboxButton.accessibilityLabel = "Check değeri \(isChecked)"
         updateCheckboxImage()
     }
     
@@ -69,6 +72,10 @@ class RedViewController: UIViewController {
     
     @objc private func hesaplarLabelTapped() {
         print("Hesaplar label tapped")
+    }
+    
+    @objc private func onCheckBoxLabelTap() {
+        checkboxTapped()
     }
     
     private let hesaplarImageView: UIImageView = {
