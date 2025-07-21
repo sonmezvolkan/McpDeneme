@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034ED8AC2E2E08670032092C /* AccesbilityTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034ED8AB2E2E08600032092C /* AccesbilityTestViewController.swift */; };
+		034ED8AF2E2E0C000032092C /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034ED8AE2E2E0BFB0032092C /* AccountsViewController.swift */; };
 		052FF6E02E2932E500181CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FF6DF2E2932E500181CC6 /* AppDelegate.swift */; };
 		052FF6E22E2932E500181CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FF6E12E2932E500181CC6 /* SceneDelegate.swift */; };
 		052FF6E42E2932E500181CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FF6E32E2932E500181CC6 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		034ED8AB2E2E08600032092C /* AccesbilityTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccesbilityTestViewController.swift; sourceTree = "<group>"; };
+		034ED8AE2E2E0BFB0032092C /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		052FF6DC2E2932E500181CC6 /* CursorMcpDeneme2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursorMcpDeneme2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		052FF6DF2E2932E500181CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		052FF6E12E2932E500181CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		034ED8AA2E2E084F0032092C /* AccesbilityTestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				034ED8AB2E2E08600032092C /* AccesbilityTestViewController.swift */,
+			);
+			path = AccesbilityTestViewController;
+			sourceTree = "<group>";
+		};
+		034ED8AD2E2E0BF60032092C /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				034ED8AE2E2E0BFB0032092C /* AccountsViewController.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
 		052FF6D32E2932E500181CC6 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +80,8 @@
 		052FF6DE2E2932E500181CC6 /* CursorMcpDeneme2 */ = {
 			isa = PBXGroup;
 			children = (
+				034ED8AD2E2E0BF60032092C /* Accounts */,
+				034ED8AA2E2E084F0032092C /* AccesbilityTestViewController */,
 				05A2A7612E2A87C5008EEAE9 /* SwipeableCell.swift */,
 				052FF6F32E29338500181CC6 /* RedViewController.swift */,
 				052FF6DF2E2932E500181CC6 /* AppDelegate.swift */,
@@ -149,6 +171,8 @@
 				052FF6E42E2932E500181CC6 /* ViewController.swift in Sources */,
 				052FF6E02E2932E500181CC6 /* AppDelegate.swift in Sources */,
 				052FF6E22E2932E500181CC6 /* SceneDelegate.swift in Sources */,
+				034ED8AF2E2E0C000032092C /* AccountsViewController.swift in Sources */,
+				034ED8AC2E2E08670032092C /* AccesbilityTestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

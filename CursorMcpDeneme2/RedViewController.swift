@@ -26,6 +26,7 @@ class RedViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.isUserInteractionEnabled = true
         label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onCheckBoxLabelTap)))
+        label.accessibilityTraits = [ .staticText ]
         return label
     }()
     
@@ -71,7 +72,8 @@ class RedViewController: UIViewController {
     }()
     
     @objc private func hesaplarLabelTapped() {
-        print("Hesaplar label tapped")
+        let accountsViewController = AccountsViewController()
+        present(accountsViewController, animated: true)
     }
     
     @objc private func onCheckBoxLabelTap() {
@@ -138,7 +140,7 @@ class RedViewController: UIViewController {
         print("Tap index: \(index), RedText range: \(nsRange)")
         if nsRange.location != NSNotFound {
             if index >= nsRange.location && index < nsRange.location + nsRange.length {
-                attributedContainer.layer.borderColor = UIColor.red.cgColor
+                showAccesbilityTest()
             }
         }
     }
@@ -237,6 +239,11 @@ class RedViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+    
+    private func showAccesbilityTest() {
+        let accesbilityTest = AccesbilityTestViewController()
+        present(accesbilityTest, animated: true)
     }
 }
 
